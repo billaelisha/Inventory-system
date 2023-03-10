@@ -101,7 +101,7 @@ class IMS:
         conn = sqlite3.connect(database=r"IMS.db") 
         cur = conn.cursor()
         try:
-            cur.execute("SELECT * FROM product")
+            cur.execute("SELECT * FROM product")    
             product = cur.fetchall()
             self.lbl_product.config(text=f"Total Product\n[{str(len(product))}]")
             
